@@ -1,0 +1,37 @@
+<div class="contador-container">
+  <h3>{{ titulo() }}</h3>
+  
+  <div class="valor-display">
+    <span class="valor">{{ valor() }}</span>
+    <small>/ {{ maximo() }}</small>
+  </div>
+  
+  <div class="botones">
+    <button 
+      class="btn btn-decrementar" 
+      (click)="decrementar()"
+      [disabled]="valor() <= 0">
+      -
+    </button>
+    
+    <button 
+      class="btn btn-reiniciar" 
+      (click)="reiniciar()">
+      Reset
+    </button>
+    
+    <button 
+      class="btn btn-incrementar" 
+      (click)="incrementar()"
+      [disabled]="valor() >= maximo()">
+      +
+    </button>
+  </div>
+  
+  <div class="progreso">
+    <div 
+      class="barra-progreso" 
+      [style.width.%]="(valor() / maximo()) * 100">
+    </div>
+  </div>
+</div>

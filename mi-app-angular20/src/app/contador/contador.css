@@ -1,0 +1,102 @@
+.contador-container {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.contador-container h3 {
+  margin: 0 0 15px 0;
+  color: #667eea;
+  font-size: 1.2rem;
+}
+
+.valor-display {
+  margin: 20px 0;
+}
+
+.valor {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.valor-display small {
+  color: #718096;
+  margin-left: 10px;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-incrementar {
+  background: #48bb78;
+  color: white;
+}
+
+.btn-incrementar:hover:not(:disabled) {
+  background: #38a169;
+  transform: scale(1.1);
+}
+
+.btn-decrementar {
+  background: #f56565;
+  color: white;
+}
+
+.btn-decrementar:hover:not(:disabled) {
+  background: #e53e3e;
+  transform: scale(1.1);
+}
+
+.btn-reiniciar {
+  background: #667eea;
+  color: white;
+  width: 60px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+
+.btn-reiniciar:hover {
+  background: #5a67d8;
+  transform: scale(1.05);
+}
+
+.progreso {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.barra-progreso {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}

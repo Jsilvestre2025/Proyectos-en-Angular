@@ -1,0 +1,55 @@
+<div class="container">
+  <header>
+    <h1>{{ title() }}</h1>
+    <p class="subtitle">Componentes • Angular 20.2</p>
+  </header>
+
+  <main>
+    <section class="mensaje-section">
+      <p class="mensaje">{{ mensaje() }}</p>
+      <p class="total-info">Total de clicks: {{ totalClicks() }}</p>
+    </section>
+
+    <!-- Usando múltiples instancias del componente -->
+    <section class="componentes-demo">
+      <h2>🧩 Demo de Componentes Reutilizables</h2>
+      
+      <div class="componentes-grid">
+        <!-- Componente 1 -->
+        <app-contador 
+          [valorInicial]="0"
+          titulo="Contador Básico"
+          [maximo]="10"
+          (cambioValor)="onContadorCambio($event)">
+        </app-contador>
+
+        <!-- Componente 2 con diferentes props -->
+        <app-contador 
+          [valorInicial]="5"
+          titulo="Contador Avanzado"
+          [maximo]="20"
+          (cambioValor)="onContadorCambio($event)">
+        </app-contador>
+
+        <!-- Componente 3 -->
+        <app-contador 
+          [valorInicial]= "0"
+          titulo="Mini Contador"
+          [maximo]="5"
+          (cambioValor)="onContadorCambio($event)">
+        </app-contador>
+      </div>
+    </section>
+
+    <section class="info-componentes">
+      <h3>🎯 ¿Qué aprendiste sobre componentes?</h3>
+      <ul>
+        <li><strong>Reutilización:</strong> Un componente, múltiples usos</li>
+        <li><strong>Inputs:</strong> Datos que recibe el componente desde el padre</li>
+        <li><strong>Outputs:</strong> Eventos que emite hacia el componente padre</li>
+        <li><strong>Encapsulación:</strong> Cada componente maneja su propio estado</li>
+        <li><strong>Composición:</strong> Combinar componentes para crear interfaces complejas</li>
+      </ul>
+    </section>
+  </main>
+</div>
